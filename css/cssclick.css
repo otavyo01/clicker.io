@@ -1,0 +1,78 @@
+
+body {
+    background-color: rgb(38, 100, 55);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    align-items: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 58%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    background-color: rgba(255, 0, 0, 0);
+}
+
+
+img {
+    width: 200px;
+    height: auto;
+    cursor: pointer;
+}
+
+
+span {
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.titulo {
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 90px;
+    animation: rgb 5s infinite; 
+}
+
+.tantodetempo{
+    position: absolute;
+    background-color: aliceblue;
+    padding: 0;
+    margin: 0;
+    display: none;
+    cursor: pointer;
+}
+
+.maisdorme{
+    position: absolute;
+    background-color: aliceblue;
+    padding: 0;
+    margin: 0;
+    display: none;
+    cursor: pointer;
+}
+
+
+@keyframes rgb {
+    0% {
+        color: rgb(255, 0, 0); 
+    }
+    33% {
+        color: rgb(0, 255, 0); 
+    }
+    66% {
+        color: rgb(0, 0, 255); 
+    }
+    100% {
+        color: rgb(255, 0, 0); 
+    }
+    
+}
