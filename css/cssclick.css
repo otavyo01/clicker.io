@@ -25,7 +25,7 @@ img {
     cursor: pointer;
 }
 
-
+    
 span {
     font-size: 50px;
     font-weight: bold;
@@ -46,6 +46,7 @@ span {
     background-color: aliceblue;
     padding: 0;
     margin: 0;
+    top: 200px;
     display: none;
     cursor: pointer;
 }
@@ -67,6 +68,13 @@ span {
     margin: 0;
     left: 1605px;
     top: 900px;
+}
+
+.discordjanela{
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(30, 15, 147);
 }
 
 .discordlogo{
