@@ -60,6 +60,30 @@ span {
     cursor: pointer;
 }
 
+.copyright{
+    position: absolute;
+    color: rgb(18, 218, 194);
+    font-family: Arial;
+    padding: 0;
+    margin: 0;
+    left: 1605px;
+    top: 900px;
+}
+
+.discordlogo{
+    position: absolute;
+    background-color: rgba(15, 2, 2, 0.551);
+    margin: 0;
+    padding: 0;
+    border-radius: 100%;
+    border-style: groove;
+    height: 70px;
+    width: 70px;
+    cursor: grab;
+    top: 860px;
+    left: 5px;
+}
+
 
 @keyframes rgb {
     0% {
