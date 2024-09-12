@@ -55,3 +55,20 @@ function maisdormidas(){
     }
     aparecer();
 }
+
+
+window.addEventListener("DOMContentLoaded", (event) => {
+    function opacidade() {
+        let img = document.getElementById("discord");
+
+        img.addEventListener("mouseover", () => {
+            img.style.opacity = "0.5"; 
+        });
+
+        img.addEventListener("mouseout", () => {
+            img.style.opacity = "1"; 
+        });
+    }
+
+    opacidade(); 
+});
