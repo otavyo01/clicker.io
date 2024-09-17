@@ -3,7 +3,7 @@ let verificacompratempo = false;
 let verificacompradormida = false;
 let cooldown = false;
 
-var tempo = 0;
+var tempo = 500;
 
 function dormir() {
     if (cooldown) return; 
