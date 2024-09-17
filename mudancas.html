@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Durma Clicker</title>
+    <link rel="stylesheet" href="./css/new.css">
+    <script type="module" src="./js/gameplay.js"></script>
+</head>
+<body>
+    <main>
+        <header>
+            <h1 id="titulo">Durma Clicker</h1>
+        </header>
+
+        <section id="gameplay">
+            <img id="gameplay-cama" src="./img/images-removebg-preview.png" alt="Cama" draggable="false">
+            <h2 id="gameplay-texto">vezes dormidas</h2>
+            <span id="gameplay-num">0</span>
+        </section>
+
+        <section id="perks">
+            <h2 id="perks-titulo">Loja</h2>
+
+            <ul id="perks-lista">
+                <li class="perks-item" id="perk-delay" onclick="maistempo()">+CPS</li>
+                <li class="perks-item" id="perk-multiplicador" onclick="maisdormidas()">Dormidas 2x</li>
+            </ul>
+        </section>
+
+        <footer>
+            <h3 id="footer-copyright">© Otávyo, 2024. All rights reserved.  (Alpha 1a) </h3>
+    
+            <div id="footer-redes_sociais">
+                <a id="footer-redes_sociais-discord" class="footer-redes_sociais-item" href="https://discord.gg/w6eagxSDYq">
+                    <img class="footer-icon" src="./img/pngegg.png">
+                </a>
+            </div>
+        </footer>
+    </main>
+
+</body>
+</html>

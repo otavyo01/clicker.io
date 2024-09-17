@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+/* Geral */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1px;
+    height: 100vh;
+}
+
+#titulo {
+    font-size: 70px;
+    margin-bottom: 20px;
+    transform: translateY(-20px);
+}
+
+/* Gameplay */
+
+#gameplay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-20px);
+}
+
+#gameplay-cama {
+    cursor: pointer;
+    user-select: none;
+}
+
+#gameplay-num {
+    margin: 0 auto;
+}
+
+/* Menus */
+
+#perks {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    left: 0;
+    gap: 5px;
+}
+
+#perks-titulo {
+    background-color: gray;
+    text-align: center;
+}
+
+#perks-lista {
+    padding: 7px 4px;
+}
+
+.perks-item {
+    display: flex;
+    align-items: center;
+    background-color: blue;
+    height: 2rem;
+}
+
+/* Footer */
+
+footer {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: flex-end;
+    transform: translateY(-60px);
+}
+
+footer h3 {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+#footer-redes_sociais {
+    display: flex;
+    justify-content: end;
+    flex: 1;
+    padding: 0 1rem;
+}
+
+.footer-redes_sociais-item {
+    border-radius: 20%;
+    transition: 0.3s;
+}
+
+.footer-redes_sociais-item:hover {background-color: lightgray;}
+.footer-redes_sociais-item:hover > .footer-icon {
+    filter: grayscale(0%);
+    transition: filter 0.3s;
+}
+
+.footer-icon {
+    width: 50px;
+    height: 50px;
+    filter: grayscale(100%);
+}
