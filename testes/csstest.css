@@ -1,6 +1,38 @@
+/* exemplo de organização */
+
 .descricao{
     background-color: rgb(255, 0, 0);
     position: absolute;
     margin: 0;
     padding: 0;
+     opacity: 0%; /* aviso: isso fez o elemento sumir */
 }
+
+
+/* botao para colocar mouse encima */
+
+.msover{
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    background-color: blue;
+    top: 5em;
+}
+
+/* descrição do bgl */
+
+.disc{
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 8.3em;
+    border-style: double;
+    background-color: gray;
+    border-color: rgb(0, 0, 0);
+    cursor: pointer;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    transition: 30s ease-in-out;
+}
+
