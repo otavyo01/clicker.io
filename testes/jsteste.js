@@ -1,3 +1,3 @@
-import perks from "../js/perks";
+import loja from "./perkstest";
 
-console.log(perks)
+console.log(loja)
