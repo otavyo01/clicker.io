@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Durma Clicker</title>
-    <link rel="stylesheet" href="./css/cssclick.css">
-    <script src="./js/jsclick.js"></script>
-
+    <link rel="stylesheet" href="./css/new.css">
+    <script type="module" src="./js/gameplay.js"></script>
 </head>
-
 <body>
-<h1 class="titulo">Durma Clicker</h1>
+    <main>
+        <header>
+            <h1 id="titulo">Durma Clicker</h1>
+        </header>
 
-<h1 class="tantodetempo" id="tempo" onclick="maistempo()">+CPS</h1>
+        <section id="gameplay">
+            <img id="gameplay-cama" src="./img/images-removebg-preview.png" alt="Cama" draggable="false">
+            <h2 id="gameplay-texto">vezes dormidas</h2>
+            <span id="gameplay-num">0</span>
+        </section>
 
-<h1 class="maisdorme" id="dormida" onclick="maisdormidas()">Dormidas 2x</h1>
+        <section id="perks">
+            <img src="img/shop.png" id="perks-titulo" draggable="false">
 
-<h3 class="copyright">© Otávyo, 2024. All rights reserved.  (Alpha 1a) </h3>
+            <ul id="perks-lista">
+                <li class="perks-item" id="perk-delay" onclick="maistempo()">
+                    <img src="img/picareta_madeira.webp" alt="Mais CPS">
+                    <p>Delay</p>
+                </li>
+                <li class="perks-item" id="perk-multiplicador" onclick="maisdormidas()">
+                    <img src="img/xp.webp" alt="Dormidas">
+                    <p>2x Dormidas</p>
+                </li>
+            </ul>
+        </section>
 
-    <div class="container">
-        <img src="./img/images-removebg-preview.png" onclick="dormir()" alt="Imagem">
-        <h1>vezes dormidas</h1>
-        <span id="num">0</span>
-    </div>
+        <footer>
+            <h3 id="footer-copyright">© Otávyo, 2024. All rights reserved.  (Alpha 1a) </h3>
     
-    <div class="discorde">
-                <a href="https://discord.gg/w6eagxSDYq">
-        <img id="discord" class="discordlogo" src="./img/pngegg.png">
-        </a>
-    </div>
+            <div id="footer-redes_sociais">
+                <a id="footer-redes_sociais-discord" class="footer-redes_sociais-item" href="https://discord.gg/w6eagxSDYq">
+                    <img class="footer-icon" src="./img/pngegg.png">
+                </a>
+            </div>
+        </footer>
+    </main>
 
 </body>
-
 </html>
