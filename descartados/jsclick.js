@@ -57,7 +57,7 @@ function maisdormidas(){
 }
 
 
-window.addEventListener("DOMContentLoaded", (event) => {
+addEventListener("DOMContentLoaded", (event) => {
     function opacidade() {
         let img = document.getElementById("discord");
 
@@ -65,9 +65,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
             img.style.opacity = "0.5"; 
         });
 
-        img.addEventListener("mouseout", () => {
-            img.style.opacity = "1"; 
-        });
+            img.addEventListener("mouseout", () => {
+                img.style.opacity = "1"; 
+            
+        }); 
+        
     }
 
     opacidade(); 

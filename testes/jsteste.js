@@ -1,5 +1,11 @@
 import loja from "./perkstest.js";
 
+function colocardesc(){
+    const a = loja[1].preço
+    document.getElementById("textoalt").innerText = a
+    return console.log(a)
+}
+
 function ele(){
     const elemento = document.createElement("h2")
     elemento.innerText = "texto";
@@ -29,7 +35,7 @@ function discr(){
     ebut.addEventListener("mouseover", () => {
         document.body.appendChild(eh2)
     })
-
+    
     ebut.addEventListener("mouseout", () => {
         document.body.removeChild(eh2)
     })
@@ -37,3 +43,4 @@ function discr(){
 
 ele()
 discr()
+colocardesc()
