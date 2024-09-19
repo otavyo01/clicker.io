@@ -106,6 +106,16 @@ main {
     user-select: none;
 }
 
+.perks-item .perk-desc {
+    position: absolute;
+    transform: translateX(200px);
+    background-color: bisque;
+    opacity: 0;
+}
+.perks-item:hover .perk-desc {
+    opacity: 1;
+}
+
 /* Footer */
 
 footer {

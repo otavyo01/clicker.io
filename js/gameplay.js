@@ -31,7 +31,8 @@ function updateStats() {
     perks.map(perk => {
         stats.perks.push({
             nome: perk.nome,
-            has: false
+            has: false,
+            level: 0
         });
     })
     console.log(stats.perks);
