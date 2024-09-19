@@ -111,6 +111,7 @@ main {
     transform: translateX(200px);
     background-color: bisque;
     opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 .perks-item:hover .perk-desc {
     opacity: 1;
