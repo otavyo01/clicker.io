@@ -29,7 +29,7 @@ function discr(){
     ebut.addEventListener("mouseover", () => {
         document.body.appendChild(eh2)
     })
-
+    
     ebut.addEventListener("mouseout", () => {
         document.body.removeChild(eh2)
     })
