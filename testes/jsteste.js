@@ -12,6 +12,11 @@ function ele(){
 function discr(){
     const ebut = document.createElement("h1")
     const eh2 = document.createElement("h2")
+    const testelement = document.createElement("h1")
+
+    document.body.appendChild(testelement)
+    testelement.innerText = "testando"
+    testelement.className = "oteste"
 
     document.body.appendChild(ebut)
     

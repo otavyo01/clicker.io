@@ -36,3 +36,16 @@
     transition: 30s ease-in-out;
 }
 
+.oteste:hover{
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    background-color: red;
+    animation: anim 1s ease-in;
+}
+
+@keyframes anim{
+    0%{
+        opacity: 0.1;
+    }
+}
