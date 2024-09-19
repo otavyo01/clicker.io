@@ -6,14 +6,6 @@ const gameplay = document.querySelector("#gameplay");
 const gameplayCama = document.querySelector("#gameplay-cama");
 const perksLista = document.querySelector("#perks-lista");
 
-let vezesDormidas = 0;
-
-let cooldown = false;
-
-let pontosPorClick = 1;
-
-var tempo = 500;
-
 gameplayCama.addEventListener("click", dormir);
 updateStats();
 updatePerks();
@@ -45,6 +37,7 @@ function updatePerks() {
         perks.map(perkItem => {
             if (perkItem.nome == perkNome && perk.has === true) {
                 console.log("ativando poder do perk: " + perkNome);
+                perkItem.func();
             }
         })
     })
@@ -52,18 +45,18 @@ function updatePerks() {
 }
 
 function dormir() {
-    if (cooldown) return; 
+    if (stats.cooldown) return; 
 
-    vezesDormidas += pontosPorClick;
+    stats.vezesDormidas += stats.pontosPorClick;
 
-    vezesDormidasText.textContent = vezesDormidas;
+    vezesDormidasText.textContent = stats.vezesDormidas;
     updateCompras();
     receberPontosAnimacao();
 
-    cooldown = true;
+    stats.cooldown = true;
     setTimeout(() => {
-        cooldown = false; 
-    }, tempo);
+        stats.cooldown = false; 
+    }, stats.delay);
 }
 
 function receberPontosAnimacao() {
@@ -73,11 +66,10 @@ function receberPontosAnimacao() {
     obj.style.position = "absolute";
 
     obj.style.left = Math.round(Math.random() * rect.width) + "px";
-
     obj.style.top = Math.round(Math.random() * rect.height) + "px";
 
     obj.className = "pontoAnimacao";
-    obj.innerText = `+${pontosPorClick}`;
+    obj.innerText = `+${stats.pontosPorClick}`;
 
     obj.style.pointerEvents = "none";
 
@@ -89,9 +81,7 @@ function receberPontosAnimacao() {
 }
 
 function updateCompras() {
-    const dormidasAtuais = parseInt(vezesDormidasText.innerText);
-
-    const itensDisponiveis = perks.filter(item => item.custo <= dormidasAtuais);
+    const itensDisponiveis = perks.filter(item => item.custo <= stats.vezesDormidas);
 
     console.log(itensDisponiveis.length > 0 ? itensDisponiveis : "Não há itens disponiveis para compra.");
 }

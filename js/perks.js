@@ -5,7 +5,7 @@ const perks = [
         nome: "delay",
         desc: "remove delay",
         custo: 100,
-        func: perkList.delay()
+        func: () => {perkList.delay()}
     },
 
     {
