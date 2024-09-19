@@ -1,8 +1,10 @@
 import perks from "./perks.js";
+import stats from "./playerStats.js";
 
 const vezesDormidasText = document.querySelector("#gameplay-num");
 const gameplay = document.querySelector("#gameplay");
 const gameplayCama = document.querySelector("#gameplay-cama");
+const perksLista = document.querySelector("#perks-lista");
 
 let vezesDormidas = 0;
 
@@ -13,6 +15,40 @@ let pontosPorClick = 1;
 var tempo = 500;
 
 gameplayCama.addEventListener("click", dormir);
+updateStats();
+updatePerks();
+
+Array.from(perksLista.children).map(perkItem => {
+    perkItem.addEventListener("click", () => {
+        const perkNome = perkItem.id.substring(5);
+
+        console.log(perkNome);
+        comprar(perkNome);
+    })
+})
+
+function updateStats() {
+    perks.map(perk => {
+        stats.perks.push({
+            nome: perk.nome,
+            has: false
+        });
+    })
+    console.log(stats.perks);
+}
+
+function updatePerks() {
+    stats.perks.map(perk => {
+        const perkNome = perk.nome;
+        
+        perks.map(perkItem => {
+            if (perkItem.nome == perkNome && perk.has === true) {
+                console.log("ativando poder do perk: " + perkNome);
+            }
+        })
+    })
+    
+}
 
 function dormir() {
     if (cooldown) return; 
@@ -30,12 +66,14 @@ function dormir() {
 }
 
 function receberPontosAnimacao() {
+    const rect = gameplay.getBoundingClientRect();
     const obj = document.createElement("h2");
+    
     obj.style.position = "absolute";
 
-    obj.style.left = Math.round(Math.random() * gameplay.getBoundingClientRect().width) + "px";
+    obj.style.left = Math.round(Math.random() * rect.width) + "px";
 
-    obj.style.top = Math.round(Math.random() * gameplay.getBoundingClientRect().height) + "px";
+    obj.style.top = Math.round(Math.random() * rect.height) + "px";
 
     obj.className = "pontoAnimacao";
     obj.innerText = `+${pontosPorClick}`;

@@ -102,6 +102,10 @@ main {
     border: 3px solid black;
 }
 
+.perks-item p {
+    user-select: none;
+}
+
 /* Footer */
 
 footer {
