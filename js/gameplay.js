@@ -90,13 +90,28 @@ function comprar(item) {
 
 }
 
-function teste(){
-    const el = document.querySelector("#perk-desc .perk-desc-titulo")
-    const item = "nada"
-    console.log(el)
+function teste() {
+
+    const iddelay = document.querySelector("#perk-delay");
+
+    const item = perks[0].nome; 
+    const descr = perks[0].desc
+    const elt = iddelay.querySelector(".perk-desc-titulo");
+    const eld = iddelay.querySelector(".perk-desc-texto");
+    
+    if (elt) {
+        elt.innerText = item;
+    }
+
+    if (eld){
+        eld.innerText = descr;
+    }
+
+    console.log(el);
 }
 
-teste()
+teste();
+
 // function maistempo() {
 //     if(valor >= 100){
 //         comprado = Math.max(0, valor - 100);
