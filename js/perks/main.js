@@ -1,1 +1,1 @@
-export {default as delay} from "./delay.js";
+export * as delay from "./delay.js";
