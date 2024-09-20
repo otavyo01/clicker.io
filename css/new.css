@@ -180,3 +180,13 @@ footer h3 {
     height: 50px;
     filter: grayscale(100%);
 }
+
+.stats-tit{
+    background-color: rgba(0, 0, 0, 0.24);
+    width: 200px;
+    height: 150px;
+}
+
+#stats-titulo{
+    width: 200px;
+}
