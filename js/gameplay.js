@@ -41,7 +41,7 @@ function updatePerks() {
         perkTitulo.innerText = perkItem.nome;
         perkTexto.innerText = perkItem.desc;
         
-        perks.map(perk => {
+        stats.perks.map(perk => {
             if (perk.nome == perkNome && perk.has === true) {
                 console.log("ativando poder do perk: " + perkNome);
                 perkItem.func();
