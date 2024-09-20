@@ -56,7 +56,6 @@ function dormir() {
 
     stats.vezesDormidas += stats.pontosPorClick;
 
-    vezesDormidasText.textContent = stats.vezesDormidas;
     updateCompras();
     receberPontosAnimacao();
 
@@ -90,11 +89,32 @@ function receberPontosAnimacao() {
 function updateCompras() {
     const itensDisponiveis = perks.filter(item => item.custo <= stats.vezesDormidas);
 
+    vezesDormidasText.textContent = stats.vezesDormidas;
+
     console.log(itensDisponiveis.length > 0 ? itensDisponiveis : "Não há itens disponiveis para compra.");
 }
 
 function comprar(item) {
+    perks.map(perk => {
+        if (stats.vezesDormidas < perk.custo) return;
 
+        const v = stats.perks.filter(v => v.nome === item);
+        perk.upgrade();
+
+        if (v[0].has === false) {
+            v[0].has = true;
+            perk.func();
+        }
+
+        v[0].level += 1;
+
+        console.log(`${perk.nome} comprado com sucesso!`);
+
+        stats.vezesDormidas -= perk.custo;
+        updateCompras();
+
+        console.log(stats.perks);
+    })
 }
 
 // function maistempo() {

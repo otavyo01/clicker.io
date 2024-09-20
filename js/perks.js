@@ -3,23 +3,26 @@ import * as perkList from "./perks/main.js";
 const perks = [
     {
         nome: "delay",
-        desc: "remove delay",
+        desc: "Remove certa quantidade do delay ao clicar.",
         custo: 100,
-        func: () => {perkList.delay()}
+        func: () => {perkList.delay.func()},
+        upgrade: () => {perkList.delay.upgrade()}
     },
 
     {
         nome: "multiplicador",
-        desc: "aumenta o numero de dormidas por click",
+        desc: "Aumenta o número de dormidas por clique.",
         custo: 200,
-        func: 0
+        func: () => {},
+        upgrade: () => {}
     },
     
     {
-        nome: "autoclicker v1",
-        desc: "clica automaticamente fazendo gerar pontos.",
+        nome: "autoclicker",
+        desc: "Gera pontos automaticamente, simulando cliques.",
         custo: 10000,
-        func: 0
+        func: () => {},
+        upgrade: () => {}
     }
 ]
 

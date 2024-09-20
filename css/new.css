@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    hyphens: auto;
 }
 
 body {
@@ -99,16 +100,28 @@ main {
     backdrop-filter: blur(1.2px);
 }
 
-.perks-item:hover img {border: 3px solid rgb(224, 89, 48);}
+.perks-item:hover img {transform: scale(85%);}
 .perks-item img {
+    width: 44px;
+    height: 39px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.perks-item:hover::before {border: 3px solid rgb(224, 89, 48); }
+.perks-item::before {
+    content: "";
+    display: block;
+    position: absolute;
     width: 35px;
     height: 35px;
     border: 3px solid rgb(41, 41, 41);
+    transform: translateX(2.5px);
     transition: border 0.4s ease-out;
 }
 
 .perks-item:hover > p {color: rgb(155, 240, 155); transform: translateX(5px);}
 .perks-item > p {
+    user-select: none;
     color: white;
     font-weight: 700;
     text-shadow: 2px 0px 0px rgba(0, 0, 0, 0.5);
