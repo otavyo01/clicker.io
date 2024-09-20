@@ -80,7 +80,9 @@ main {
     display: flex;
     flex-direction: column;
     padding: 10px 4px;
-    background-color: rgba(126, 126, 126, 0.432);
+    background-image: url("../img/pedra.jpg");
+    background-position: center;
+    background-size: 70%;
 }
 
 .perks-item {
