@@ -6,9 +6,12 @@ const gameplay = document.querySelector("#gameplay");
 const gameplayCama = document.querySelector("#gameplay-cama");
 const perksLista = document.querySelector("#perks-lista");
 
+const itensLoja = {};
+
 gameplayCama.addEventListener("click", dormir);
 updateStats();
 updatePerks();
+updateCompras();
 
 Array.from(perksLista.children).map(perkItem => {
     perkItem.addEventListener("click", () => {
@@ -87,11 +90,22 @@ function receberPontosAnimacao() {
 }
 
 function updateCompras() {
-    const itensDisponiveis = perks.filter(item => item.custo <= stats.vezesDormidas);
+    perks.map(item => {
+        const disponivel = item.custo <= stats.vezesDormidas ? true : false;
+        const box = perksLista.querySelector(`#perk-${item.nome}`);
+        
+        if (disponivel) {
+            box.classList.add("disp");
+            box.classList.remove("indisp");
+        } else {
+            box.classList.add("indisp");
+            box.classList.remove("disp");
+        }
+    })
 
     vezesDormidasText.textContent = stats.vezesDormidas;
 
-    console.log(itensDisponiveis.length > 0 ? itensDisponiveis : "Não há itens disponiveis para compra.");
+    console.log(itensLoja);
 }
 
 function comprar(item) {
