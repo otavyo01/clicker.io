@@ -31,11 +31,18 @@ function updateStats() {
 }
 
 function updatePerks() {
-    stats.perks.map(perk => {
-        const perkNome = perk.nome;
+    perks.map(perkItem => {
+        const perkNome = perkItem.nome;
+        const perkDescription = document.querySelector(`#perk-${perkNome} .perk-desc`);
+
+        const perkTitulo = perkDescription.querySelector(".perk-desc-titulo");
+        const perkTexto = perkDescription.querySelector(".perk-desc-texto");
+
+        perkTitulo.innerText = perkItem.nome;
+        perkTexto.innerText = perkItem.desc;
         
-        perks.map(perkItem => {
-            if (perkItem.nome == perkNome && perk.has === true) {
+        perks.map(perk => {
+            if (perk.nome == perkNome && perk.has === true) {
                 console.log("ativando poder do perk: " + perkNome);
                 perkItem.func();
             }
@@ -89,28 +96,6 @@ function updateCompras() {
 function comprar(item) {
 
 }
-
-function teste() {
-
-    const iddelay = document.querySelector("#perk-delay");
-
-    const item = perks[0].nome; 
-    const descr = perks[0].desc
-    const elt = iddelay.querySelector(".perk-desc-titulo");
-    const eld = iddelay.querySelector(".perk-desc-texto");
-    
-    if (elt) {
-        elt.innerText = item;
-    }
-
-    if (eld){
-        eld.innerText = descr;
-    }
-
-    console.log(el);
-}
-
-teste();
 
 // function maistempo() {
 //     if(valor >= 100){
