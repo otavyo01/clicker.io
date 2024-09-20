@@ -98,7 +98,7 @@ main {
     background-color: rgba(0, 0, 0, 0.473);
 }
 
-.perks-item:hover img {border: 3px solid rgb(232, 235, 97);}
+.perks-item:hover img {border: 3px solid rgb(210, 212, 70);}
 .perks-item img {
     width: 35px;
     height: 35px;
