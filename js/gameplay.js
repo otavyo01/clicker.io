@@ -90,6 +90,13 @@ function comprar(item) {
 
 }
 
+function teste(){
+    const el = document.querySelector("#perk-desc .perk-desc-titulo")
+    const item = "nada"
+    console.log(el)
+}
+
+teste()
 // function maistempo() {
 //     if(valor >= 100){
 //         comprado = Math.max(0, valor - 100);

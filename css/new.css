@@ -108,6 +108,12 @@ main {
     user-select: none;
 }
 
+.perks-item > p{
+    color: white;
+    font-weight: 900;
+    text-shadow: 2px 0px 0px rgba(0, 0, 0, 0.5);
+}
+
 .perks-item .perk-desc {
     position: absolute;
     transform: translateX(200px);
