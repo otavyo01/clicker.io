@@ -31,11 +31,18 @@ function updateStats() {
 }
 
 function updatePerks() {
-    stats.perks.map(perk => {
-        const perkNome = perk.nome;
+    perks.map(perkItem => {
+        const perkNome = perkItem.nome;
+        const perkDescription = document.querySelector(`#perk-${perkNome} .perk-desc`);
+
+        const perkTitulo = perkDescription.querySelector(".perk-desc-titulo");
+        const perkTexto = perkDescription.querySelector(".perk-desc-texto");
+
+        perkTitulo.innerText = perkItem.nome;
+        perkTexto.innerText = perkItem.desc;
         
-        perks.map(perkItem => {
-            if (perkItem.nome == perkNome && perk.has === true) {
+        stats.perks.map(perk => {
+            if (perk.nome == perkNome && perk.has === true) {
                 console.log("ativando poder do perk: " + perkNome);
                 perkItem.func();
             }
